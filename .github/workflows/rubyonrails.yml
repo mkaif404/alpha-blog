@@ -56,11 +56,3 @@ jobs:
         run: bin/brakeman -q -w2
       - name: Lint Ruby files
         run: bin/rubocop --parallel
-      - name: "Setup Aliyun CLI" Action for GitHub Actions
-  # You may pin to the exact commit or the version.
-  # uses: aliyun/setup-aliyun-cli-action@09a5f86915bb556e27bf050e9a5e339aeb073df5
-        uses: aliyun/setup-aliyun-cli-action@v1
-        with:
-    # The version of Aliyun CLI
-    version: # optional, default is latest
-          
