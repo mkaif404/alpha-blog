@@ -16,5 +16,5 @@ services:
         sync: false # Do not sync this value from your local environment
 databases:
   - name: my-rails-db
-    engine: postgresql
+    engine: sqlite3
     plan: free
