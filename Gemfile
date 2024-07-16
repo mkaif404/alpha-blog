@@ -44,9 +44,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
-  # gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to
-  gem 'byebug',platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -66,5 +66,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production
+group :production do
+  gem 'pg', '~> 1.5', '>= 1.5.6'
+end
