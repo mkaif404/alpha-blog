@@ -1,4 +1,3 @@
-# render.yaml
 services:
   - type: web
     name: my-rails-app
@@ -14,8 +13,8 @@ services:
       - key: RAILS_ENV
         value: production
       - key: SECRET_KEY_BASE
-        sync: false # Do not sync this value from your local environment
+        sync: false
 databases:
   - name: my-rails-db
-    engine: postgresql
+    type: postgresql
     plan: free
